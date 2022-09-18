@@ -1,7 +1,7 @@
 //  src, yes this is rerubi based shit obf
 
 let DefaultSettings = {
-    '__VERSION__': '0.4.4',
+    '__VERSION__': '0.5.1',
 
     'Debug': false,
     'SkipMinify': false,
@@ -10,14 +10,14 @@ let DefaultSettings = {
     'BeautifyDebug': true,
     'PrintStep': false,
     'JIT': false,
-    'Watermark': `My Super Cool Obfuscator`,
+    'Watermark': `My Obf, discord.gg/fuckyomamatestfortnite`,
     'Uid': '1',
 
     'AntiTamper': true,
     'MaximumSecurity': true,
     'UseSuperops': false
 }
-// i wouldn't recommend changing stuff from here..
+
 global.TopDir = __dirname
 const fs = require('fs')
 const path = require('path')
@@ -136,32 +136,7 @@ module.exports = {
             }
     
         }
-        code = `--[[ 
-
-                                                                                                           
-                                                                                                           
-            AAA                                                                                         
-            A:::A                                                                                        
-           A:::::A                                                                                       
-          A:::::::A                                                                                      
-         A:::::::::A           zzzzzzzzzzzzzzzzzuuuuuu    uuuuuu rrrrr   rrrrrrrrr       eeeeeeeeeeee    
-        A:::::A:::::A          z:::::::::::::::zu::::u    u::::u r::::rrr:::::::::r    ee::::::::::::ee  
-       A:::::A A:::::A         z::::::::::::::z u::::u    u::::u r:::::::::::::::::r  e::::::eeeee:::::ee
-      A:::::A   A:::::A        zzzzzzzz::::::z  u::::u    u::::u rr::::::rrrrr::::::re::::::e     e:::::e
-     A:::::A     A:::::A             z::::::z   u::::u    u::::u  r:::::r     r:::::re:::::::eeeee::::::e
-    A:::::AAAAAAAAA:::::A           z::::::z    u::::u    u::::u  r:::::r     rrrrrrre:::::::::::::::::e 
-   A:::::::::::::::::::::A         z::::::z     u::::u    u::::u  r:::::r            e::::::eeeeeeeeeee  
-  A:::::AAAAAAAAAAAAA:::::A       z::::::z      u:::::uuuu:::::u  r:::::r            e:::::::e           
- A:::::A             A:::::A     z::::::zzzzzzzzu:::::::::::::::uur:::::r            e::::::::e          
-A:::::A               A:::::A   z::::::::::::::z u:::::::::::::::ur:::::r             e::::::::eeeeeeee  
-A:::::A                 A:::::A z:::::::::::::::z  uu::::::::uu:::ur:::::r              ee:::::::::::::e  
-AAAAAAA                   AAAAAAAzzzzzzzzzzzzzzzzz    uuuuuuuu  uuuurrrrrrr                eeeeeeeeeeeeee  
-                                                                                                         
-                                                                                                         
-                                                                                                         
-                                                                                                                                                                                                                                                                                                                                                                                                                   
-            Azure obfuscator, v${settings.__VERSION__}\nr
-        ]]--\n\n` + code
+        code = `--[[\n      MyObf, v${settings.__VERSION__}\n--]]\n\n` + code
 
         if (settings.JIT && process.platform === 'win32') {
             console.log(`Running file ('./obf/temp/output.lua')...`)
