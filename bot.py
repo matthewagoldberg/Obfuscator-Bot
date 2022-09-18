@@ -20,10 +20,10 @@ def obfuscate(url):
     with open(input_file, "wb") as file:
         file.write(file_data)
 
-    p = check_output(["./Obfuscator/run.js"])
+    p = check_output(['node', "/Obfuscator/run.js"])
 
-    x = "Azure Obfuscator"
-    y = "Azure Obfuscated Script"
+    x = "super cool"
+    y = "My Obf"
     with open(f"{file_path}/temp/output-1.lua", 'r') as file :
         filedata = file.read()
     filedata = filedata.replace(x, y)
